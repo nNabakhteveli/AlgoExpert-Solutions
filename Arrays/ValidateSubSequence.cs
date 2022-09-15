@@ -4,18 +4,18 @@ using System.Collections.Generic;
 public class Program
 {
    // Solution 1:
-   // Time Complexity: O(n)
+   // Time Complexity: O(n), where n is the length of the array
    public static bool IsValidSubsequence1(List<int> array, List<int> sequence)
    {
-      int idx = 0;
-      for (int j = 0; j < array.Count; j++)
+      int matchCount = 0;
+      for (int i = 0; i < array.Count; i++)
       {
-         if (idx <= sequence.Count - 1 && sequence[idx] == array[j])
+         if (matchCount <= sequence.Count - 1 && sequence[matchCount] == array[i])
          {
-            idx++;
+            matchCount++;
          }
       }
-      return idx == sequence.Count;
+      return matchCount == sequence.Count;
    }
 
    // Solution 2:

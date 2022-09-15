@@ -2,7 +2,7 @@ using System;
 
 public class Program
 {
-	// Time complexity: O(n ^ 2)
+   // Time complexity: O(n ^ 2)
    public static int[] TwoNumberSum(int[] array, int targetSum)
    {
       int[] foundNumbers = new int[2];
