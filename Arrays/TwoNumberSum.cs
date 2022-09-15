@@ -2,11 +2,10 @@ using System;
 
 public class Program
 {
+	// Time complexity: O(n ^ 2)
    public static int[] TwoNumberSum(int[] array, int targetSum)
    {
-      // Write your code here.
       int[] foundNumbers = new int[2];
-      int[] emptyArr = { };
 
       for (int i = 0; i < array.Length; i++)
       {
@@ -19,6 +18,6 @@ public class Program
             }
          }
       }
-      return foundNumbers[0] + foundNumbers[1] == targetSum ? foundNumbers : emptyArr;
+      return foundNumbers[0] + foundNumbers[1] == targetSum ? foundNumbers : new int[0];
    }
 }
